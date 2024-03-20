@@ -85,7 +85,7 @@ void eliminaElementos(List*L, int elem)
   entero = (int*)first(L);
   while (entero != NULL)
   {
-    if (*elemento == NULL)
+    if (*elemento == elem)
       popFront(L);
 
     else
@@ -94,6 +94,7 @@ void eliminaElementos(List*L, int elem)
       popCurrent(L);
     }
   }
+  
 }
 
 /*
