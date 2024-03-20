@@ -67,7 +67,6 @@ int sumaLista(List *L)
     dato = (int*)next(L);
   }
   return enteros;
-  return 0;
 }
 
 /*
