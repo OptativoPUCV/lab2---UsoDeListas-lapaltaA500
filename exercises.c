@@ -46,13 +46,10 @@ List* crea_lista()
   List* L = create_list();
   for(int i = 1 ; i <= 10 ; i++)
     {
-      int* elemento = 
-      
-      
+      int* elemento = (int *)malloc(sizeof(int));
+      *elemento = i;
+      push_back(L, elemento);
     }
-    
-  
-  
   return L;
 }
 

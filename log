@@ -663,3 +663,15 @@ arraylist.c:37:6: error: ‘pushFront’ defined but not used [-Werror=unused-fu
 cc1: all warnings being treated as errors
 Compilation failed
 c8e37b5
+Wed 20 Mar 2024 08:43:26 PM UTC: 
+ exercises.c | 9 +++------
+ 1 file changed, 3 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:51:7: error: implicit declaration of function ‘push_back’; did you mean ‘pushBack’? [-Werror=implicit-function-declaration]
+   51 |       push_back(L, elemento);
+      |       ^~~~~~~~~
+      |       pushBack
+cc1: all warnings being treated as errors
+Compilation failed
+9c62e4d
