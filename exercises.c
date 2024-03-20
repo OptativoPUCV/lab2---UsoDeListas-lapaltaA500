@@ -58,7 +58,7 @@ retorne la suma de sus elementos.
 */
 int sumaLista(List *L) 
 {
-  int enteros = 0;
+  int enteros = NULL;
   int* dato;
   dato = (int*)first(L);
   while (dato != NULL)
