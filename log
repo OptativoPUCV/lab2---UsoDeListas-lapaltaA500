@@ -809,3 +809,38 @@ exercises.c:90:1: error: expected expression before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 762c235
+Wed 20 Mar 2024 08:57:33 PM UTC: 
+ exercises.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:48:5: error: expected expression before ‘int’
+   48 |     int* elemento = (int *)malloc(sizeof(int));
+      |     ^~~
+exercises.c:47:3: error: this ‘for’ clause does not guard... [-Werror=misleading-indentation]
+   47 |   for(int i = 1 ; i <= 10 ; i++)
+      |   ^~~
+exercises.c:49:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   49 |     *elemento = i;
+      |     ^
+exercises.c:49:6: error: ‘elemento’ undeclared (first use in this function)
+   49 |     *elemento = i;
+      |      ^~~~~~~~
+exercises.c:49:6: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:49:17: error: ‘i’ undeclared (first use in this function)
+   49 |     *elemento = i;
+      |                 ^
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:87:14: error: passing argument 1 of ‘popFront’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+   87 |     popFront(entero);
+      |              ^~~~~~
+      |              |
+      |              int *
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:26:22: note: expected ‘List *’ but argument is of type ‘int *’
+   26 | void *popFront(List *L);
+      |                ~~~~~~^
+cc1: all warnings being treated as errors
+Compilation failed
+53ef12f
