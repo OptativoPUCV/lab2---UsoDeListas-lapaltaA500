@@ -111,9 +111,8 @@ void copia_pila(Stack* P1, Stack* P2)
     push(pAux, elemento);
   }
   while ((elemento =pop(pAux)) != NULL)
-  {
     push(P1, elemento);  
-  }
+  
   free(pAux);
 }
 
