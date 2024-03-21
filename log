@@ -1203,3 +1203,9 @@ exercises.c:49:17: error: ‘i’ undeclared (first use in this function)
 cc1: all warnings being treated as errors
 Compilation failed
 c866f77
+Thu 21 Mar 2024 09:37:37 PM UTC: 
+ exercises.c | 2 ++
+ 1 file changed, 2 insertions(+)
+ tests:  3|2
+total_score: 40/70
+f1a5b77
