@@ -125,36 +125,25 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena) 
 {
-  Stack* pAux = create_stack();
-  for (int i = 0; i < strlen(cadena); i++)
-  {
-    if (cadena[i] == '(')
-    {
-      push(pAux, &cadena[i]);
-    }
-    else
-    {
-      if (cadena[i] == ')')
-      {
-        if (pAux->head == NULL)
-        {
-          return 0;
-        }
-        else
-        {
-          pop(pAux);
-        }
+  int contador = 0;
+
+  while (*cadena != '\0') {
+      if (*cadena == '(') {
+          contador++;
+      } else if (*cadena == ')') {
+          contador--;
+          if (contador < 0) {
+              return 0; // Si hay más ')' que '(', los paréntesis no están balanceados
+          }
       }
-    }
+      cadena++;
   }
-  if (pAux->head == NULL)
-  {
-    return 1;
+
+  if (contador == 0) {
+      return 1; // Si contador es igual a cero, los paréntesis están balanceados
+  } else {
+      return 0; // Si contador no es igual a cero, los paréntesis no están balanceados
   }
-  else
-  {
-    return 0;
-  }
-   return 0;
+  
 }
 
