@@ -133,16 +133,16 @@ int parentesisBalanceados(char *cadena)
       } else if (*cadena == ')') {
           contador--;
           if (contador < 0) {
-              return 0; // Si hay más ')' que '(', los paréntesis no están balanceados
+              return 1; // Si hay más ')' que '(', los paréntesis no están balanceados
           }
       }
       cadena++;
   }
 
   if (contador == 0) {
-      return 1; // Si contador es igual a cero, los paréntesis están balanceados
+      return 0; // Si contador es igual a cero, los paréntesis están balanceados
   } else {
-      return 0; // Si contador no es igual a cero, los paréntesis no están balanceados
+      return 1; // Si contador no es igual a cero, los paréntesis no están balanceados
   }
   
 }
