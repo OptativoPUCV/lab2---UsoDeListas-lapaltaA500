@@ -135,20 +135,17 @@ int parentesisBalanceados(char *cadena)
       } else if (*cadena == ')') {
           contador--;
           if (contador < 0) {
-              return 0; //no están balanceados
+              return 0; // No están balanceados
           }
       }
       cadena++;
   }
 
-  if (contador == 0) 
-  {
-    return 1;
-  }// balanceados
-  else 
-  {
-    return 0; // no están balanceados
+  // Balanceados si contador es 0, de lo contrario no están balanceados
+  if (contador == 0) {
+      return 1;
+  } else {
+      return 0;
   }
-  
 }
 
